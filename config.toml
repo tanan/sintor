@@ -1,0 +1,8 @@
+[application]
+port=3000
+
+[slack]
+token=""
+api_url=""
+channel=""
+user=""
