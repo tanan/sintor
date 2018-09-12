@@ -18,5 +18,5 @@ func main() {
 		log.Fatalf("cannot read a config file. error: %v\n", err)
 	}
 	router := web.LoadRouter(con)
-	router.Logger.Fatal(router.Start(":" + strconv.Itoa(8888)))
+	router.Logger.Fatal(router.Start(":" + strconv.Itoa(con.Application.Port)))
 }
