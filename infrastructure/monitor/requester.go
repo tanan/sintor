@@ -34,7 +34,10 @@ func (r Requester) get(url string) (domain.MonitorResult, error) {
 		}
 	}
 	return domain.MonitorResult{
-		Status:   res.StatusCode,
-		Contents: string(body),
+		Response: domain.Response{
+			Status:       res.StatusCode,
+			ResponseTime: 1,
+			Contents:     string(body),
+		},
 	}, nil
 }

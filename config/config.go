@@ -3,12 +3,12 @@ package config
 import "github.com/BurntSushi/toml"
 
 type Config struct {
-	Application   AppConfig    `toml:"application"`
-	Slack         SlackConfig  `toml:"slack"`
+	Application AppConfig   `toml:"application"`
+	Slack       SlackConfig `toml:"slack"`
 }
 
 type AppConfig struct {
-	Port            int           `toml:"port"`
+	Port int `toml:"port"`
 }
 
 type SlackConfig struct {
@@ -18,7 +18,7 @@ type SlackConfig struct {
 	User    string `toml:"user"`
 }
 
-func LoadFile(path string)(*Config, error) {
+func LoadFile(path string) (*Config, error) {
 	var config Config
 	_, err := toml.DecodeFile(path, &config)
 	if err != nil {
