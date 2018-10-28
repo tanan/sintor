@@ -9,7 +9,6 @@ type Method int
 type Monitor struct {
 	ID       MonitorID
 	Request  Request
-	Schedule Schedule
 }
 
 type MonitorResultID int
