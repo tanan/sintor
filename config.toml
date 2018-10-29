@@ -1,8 +1,14 @@
-[application]
-port=3000
-
-[slack]
-token=""
-api_url=""
-channel=""
-user=""
+application:
+    port: 3000
+    database:
+        user: "root"
+        pass: "secret"
+        host: "localhost"
+        schema: "sintor"
+        port: 3306
+    notify:
+        slack:
+            token: ""
+            api_url: ""
+            channel: ""
+            user: ""
